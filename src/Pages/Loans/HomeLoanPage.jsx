@@ -134,7 +134,7 @@ const HomeLoanPage = () => {
                 Apply for Home Loan
               </button>
               <button className="border-2 border-indigo-600 text-indigo-600 font-semibold py-3 px-6 rounded-lg hover:bg-indigo-50 transition duration-300 transform hover:scale-105">
-                Check Eligibility
+                Calculate EMI
               </button>
             </div>
             <div className="mt-10 flex items-center space-x-4">

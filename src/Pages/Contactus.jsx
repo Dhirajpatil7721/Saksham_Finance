@@ -240,7 +240,7 @@ function Contactus() {
             </div>
             <h3 className="text-xl font-bold text-gray-800">Our Location</h3>
           </div>
-          <p className="text-gray-600 pl-14">123 Business Street, Financial District, Mumbai 400001</p>
+          <p className="text-gray-600 pl-14">Sr No. 19/1, Hingne Home Colony, Karve Nagar, Pune-411052</p>
         </div>
 
         {/* Contact Card */}
@@ -253,7 +253,7 @@ function Contactus() {
             </div>
             <h3 className="text-xl font-bold text-gray-800">Phone Number</h3>
           </div>
-          <p className="text-gray-600 pl-14">+91 98765 43210</p>
+          <p className="text-gray-600 pl-14">+91 7276240084</p>
         </div>
 
         {/* Email Card */}
@@ -266,7 +266,7 @@ function Contactus() {
             </div>
             <h3 className="text-xl font-bold text-gray-800">Email Address</h3>
           </div>
-          <p className="text-gray-600 pl-14">contact@example.com</p>
+          <p className="text-gray-600 pl-14">lokesh@gamil.com</p>
         </div>
       </div>
 

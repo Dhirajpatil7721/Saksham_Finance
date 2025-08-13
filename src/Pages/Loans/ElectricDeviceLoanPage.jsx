@@ -1,11 +1,30 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaCheck, FaCalculator, FaCreditCard, FaClock, FaUserShield } from 'react-icons/fa';
-import { MdOutlinePayments, MdSavings } from 'react-icons/md';
+import { 
+  FaCheck, 
+  FaCalculator, 
+  FaMobileAlt, 
+  FaLaptop, 
+  FaTabletAlt, 
+  FaHeadphones,
+  FaCamera,       // ✅ Added
+  FaClock,        // ✅ Added
+  FaHome          // ✅ Added
+} from 'react-icons/fa';
 
-const CreditCardLoanPage = () => {
+import { MdOutlinePayments, MdElectricBolt } from 'react-icons/md';
+
+// Image imports
+const deviceHeroImg = 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80';
+const customer1Img = 'https://randomuser.me/api/portraits/women/45.jpg';
+const customer2Img = 'https://randomuser.me/api/portraits/men/32.jpg';
+const customer3Img = 'https://randomuser.me/api/portraits/women/68.jpg';
+const customer4Img = 'https://randomuser.me/api/portraits/men/55.jpg';
+
+const ElectricDeviceLoanPage = () => {
   const [loanAmount, setLoanAmount] = useState(50000);
-  const [loanTerm, setLoanTerm] = useState(6);
+  const [loanTerm, setLoanTerm] = useState(12);
+  const [interestRate, setInterestRate] = useState(10.5);
   const [activeFaq, setActiveFaq] = useState(null);
 
   const toggleFaq = (index) => {
@@ -13,8 +32,8 @@ const CreditCardLoanPage = () => {
   };
 
   const calculateEMI = () => {
-    const rate = 12 / 100 / 12; // Monthly interest rate
-    const term = loanTerm;
+    const rate = interestRate / 100 / 12; // Monthly interest rate
+    const term = loanTerm; // Already in months
     const principal = loanAmount;
     
     const emi = principal * rate * Math.pow(1 + rate, term) / (Math.pow(1 + rate, term) - 1);
@@ -23,65 +42,81 @@ const CreditCardLoanPage = () => {
 
   const features = [
     {
-      icon: <FaCreditCard className="text-3xl" />,
-      title: "Credit Card Limit Based",
-      desc: "Get loans up to 90% of your credit card limit without additional documentation"
+      icon: <MdElectricBolt className="text-3xl" />,
+      title: "Instant Approval",
+      desc: "Get approved within minutes with minimal documentation"
+    },
+    {
+      icon: <FaMobileAlt className="text-3xl" />,
+      title: "All Devices Covered",
+      desc: "Smartphones, laptops, tablets, cameras, and smart devices"
     },
     {
       icon: <MdOutlinePayments className="text-3xl" />,
-      title: "Flexible Tenure",
-      desc: "Repayment options from 3 to 24 months to suit your needs"
+      title: "No Down Payment",
+      desc: "100% financing with zero down payment options"
     },
     {
-      icon: <FaUserShield className="text-3xl" />,
-      title: "No Collateral",
-      desc: "Unsecured loans based on your credit card usage history"
-    },
-    {
-      icon: <MdSavings className="text-3xl" />,
-      title: "Quick Processing",
-      desc: "Instant approval for existing credit card customers"
+      icon: <FaHeadphones className="text-3xl" />,
+      title: "Buy Now, Pay Later",
+      desc: "Enjoy your device now with flexible EMI options"
     }
   ];
 
   const faqs = [
     {
-      question: "What is the minimum and maximum loan amount?",
-      answer: "You can avail credit card loans from ₹10,000 up to 90% of your credit card limit, with maximum up to ₹10 lakhs."
+      question: "What devices are eligible for financing?",
+      answer: "All electronic devices including smartphones (₹10,000+), laptops (₹25,000+), tablets, cameras, smartwatches, and home appliances from partner retailers."
     },
     {
-      question: "Which credit cards are eligible?",
-      answer: "Most major bank credit cards with at least 6 months of good repayment history are eligible."
+      question: "What documents are required?",
+      answer: "Just your KYC (Aadhaar/PAN), latest salary slip (if salaried), and bank statement for last 3 months."
     },
     {
-      question: "How long does approval take?",
-      answer: "Approval is instant for pre-approved offers. Otherwise, it takes 2-4 hours after document submission."
+      question: "How quickly can I get the device?",
+      answer: "Instant approval at partner stores - walk out with your device immediately after approval."
     },
     {
       question: "Can I prepay the loan?",
-      answer: "Yes, you can prepay after 3 EMIs with nominal prepayment charges of 2-3%."
+      answer: "Yes, you can prepay after 3 EMIs with just 1% foreclosure charges."
+    },
+    {
+      question: "Is insurance included?",
+      answer: "Optional device protection plan available at nominal cost covering damage and theft."
     }
   ];
 
   const testimonials = [
     {
-      name: "Neha Gupta",
-      role: "Marketing Executive",
-      content: "Got funds within 30 minutes of applying using my credit card limit. Super convenient!",
-      rating: 5
+      name: "Priya Sharma",
+      role: "Graphic Designer",
+      content: "Got my new MacBook on EMI with zero down payment. Process took just 10 minutes at the store!",
+      rating: 5,
+      img: customer1Img
     },
     {
-      name: "Arjun Reddy",
-      role: "Business Consultant",
-      content: "Better interest rates than personal loan and no paperwork required.",
-      rating: 4
+      name: "Rahul Verma",
+      role: "Student",
+      content: "Financed my smartphone over 12 months. Perfect for students with limited budget.",
+      rating: 4,
+      img: customer2Img
     },
     {
-      name: "Meena Shah",
-      role: "Doctor",
-      content: "Used this for emergency medical expenses. The process was seamless.",
-      rating: 5
+      name: "Ananya Patel",
+      role: "Photographer",
+      content: "Purchased my professional camera gear through their financing. No hidden charges!",
+      rating: 5,
+      img: customer3Img
     }
+  ];
+
+  const deviceTypes = [
+    { name: "Smartphones", icon: <FaMobileAlt className="text-2xl" /> },
+    { name: "Laptops", icon: <FaLaptop className="text-2xl" /> },
+    { name: "Tablets", icon: <FaTabletAlt className="text-2xl" /> },
+    { name: "Cameras", icon: <FaCamera className="text-2xl" /> },
+    { name: "Smartwatches", icon: <FaClock className="text-2xl" /> },
+    { name: "Appliances", icon: <FaHome className="text-2xl" /> },
   ];
 
   return (
@@ -96,14 +131,14 @@ const CreditCardLoanPage = () => {
             className="md:w-1/2 mb-10 md:mb-0"
           >
             <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              Credit Card Loans <span className="text-indigo-600">Instantly</span>
+              Device Financing <span className="text-indigo-600">at 10.5%*</span>
             </h1>
             <p className="text-lg text-gray-600 mb-8">
-              Convert your credit card limit to cash with loans up to ₹10 lakhs at competitive rates starting from 12% p.a.
+              Upgrade your tech without upfront payment. Get the latest devices with easy EMI options and instant approval.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
-                Check Offer
+                Apply Now
               </button>
               <button className="border-2 border-indigo-600 text-indigo-600 font-semibold py-3 px-6 rounded-lg hover:bg-indigo-50 transition duration-300 transform hover:scale-105">
                 Calculate EMI
@@ -111,10 +146,10 @@ const CreditCardLoanPage = () => {
             </div>
             <div className="mt-10 flex items-center space-x-4">
               <div className="flex -space-x-2">
-                {[1, 2, 3].map((item) => (
+                {[customer4Img, customer1Img, customer2Img].map((img, index) => (
                   <img 
-                    key={item}
-                    src={`https://randomuser.me/api/portraits/${item % 2 === 0 ? 'women' : 'men'}/${item+20}.jpg`} 
+                    key={index}
+                    src={img} 
                     alt="Happy customer"
                     className="w-10 h-10 rounded-full border-2 border-white"
                   />
@@ -128,7 +163,7 @@ const CreditCardLoanPage = () => {
                     </svg>
                   ))}
                 </div>
-                <p className="text-sm text-gray-600">Trusted by 5,000+ credit card holders</p>
+                <p className="text-sm text-gray-600">Trusted by 50,000+ customers</p>
               </div>
             </div>
           </motion.div>
@@ -140,8 +175,8 @@ const CreditCardLoanPage = () => {
             className="md:w-1/2 relative"
           >
             <img 
-              src="https://images.unsplash.com/photo-1604594849809-dfedbc827105?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-              alt="Credit cards"
+              src={deviceHeroImg} 
+              alt="Electronic Devices"
               className="w-full max-w-lg mx-auto rounded-xl shadow-2xl"
             />
             <motion.div 
@@ -151,11 +186,11 @@ const CreditCardLoanPage = () => {
             >
               <div className="flex items-center">
                 <div className="bg-indigo-100 p-3 rounded-full mr-3">
-                  <FaClock className="text-indigo-600 text-xl" />
+                  <MdElectricBolt className="text-indigo-600 text-xl" />
                 </div>
                 <div>
                   <p className="font-semibold text-gray-800">Instant Approval</p>
-                  <p className="text-sm text-gray-600">For pre-approved offers</p>
+                  <p className="text-sm text-gray-600">Within minutes</p>
                 </div>
               </div>
             </motion.div>
@@ -167,31 +202,53 @@ const CreditCardLoanPage = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Loan Calculator</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">Calculate your EMI based on your credit card limit</p>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">EMI Calculator</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">Calculate your monthly payments for any device</p>
           </div>
           
           <div className="flex flex-col lg:flex-row gap-8">
             <div className="lg:w-1/2 bg-indigo-50 p-8 rounded-2xl shadow-md">
               <div className="mb-8">
-                <label className="block text-gray-700 font-medium mb-2">Loan Amount (₹)</label>
+                <label className="block text-gray-700 font-medium mb-2">Device Price (₹)</label>
                 <div className="flex items-center">
                   <input 
                     type="range" 
                     min="10000" 
-                    max="1000000" 
-                    step="10000"
+                    max="200000" 
+                    step="1000"
                     value={loanAmount}
                     onChange={(e) => setLoanAmount(e.target.value)}
                     className="w-full h-2 bg-indigo-200 rounded-lg appearance-none cursor-pointer"
                   />
-                  <span className="ml-4 text-indigo-700 font-semibold min-w-[100px] text-right">
+                  <span className="ml-4 text-indigo-700 font-semibold min-w-[120px] text-right">
                     ₹{loanAmount.toLocaleString()}
                   </span>
                 </div>
                 <div className="flex justify-between text-xs text-gray-500 mt-1">
                   <span>₹10K</span>
-                  <span>₹10L</span>
+                  <span>₹2L</span>
+                </div>
+              </div>
+              
+              <div className="mb-8">
+                <label className="block text-gray-700 font-medium mb-2">Interest Rate (%)</label>
+                <div className="flex items-center">
+                  <input 
+                    type="range" 
+                    min="8" 
+                    max="18" 
+                    step="0.5"
+                    value={interestRate}
+                    onChange={(e) => setInterestRate(e.target.value)}
+                    className="w-full h-2 bg-indigo-200 rounded-lg appearance-none cursor-pointer"
+                  />
+                  <span className="ml-4 text-indigo-700 font-semibold min-w-[50px] text-right">
+                    {interestRate}%
+                  </span>
+                </div>
+                <div className="flex justify-between text-xs text-gray-500 mt-1">
+                  <span>8%</span>
+                  <span>18%</span>
                 </div>
               </div>
               
@@ -229,19 +286,19 @@ const CreditCardLoanPage = () => {
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <p className="text-gray-600 text-sm">Interest Rate</p>
-                    <p className="font-medium">12% - 18% p.a.</p>
-                  </div>
-                  <div>
                     <p className="text-gray-600 text-sm">Total Interest</p>
                     <p className="font-medium">₹{(calculateEMI() * loanTerm - loanAmount).toLocaleString('en-IN', {maximumFractionDigits: 0})}</p>
+                  </div>
+                  <div>
+                    <p className="text-gray-600 text-sm">Total Payment</p>
+                    <p className="font-medium">₹{(calculateEMI() * loanTerm).toLocaleString('en-IN', {maximumFractionDigits: 0})}</p>
                   </div>
                 </div>
               </div>
             </div>
             
             <div className="lg:w-1/2">
-              <h3 className="text-xl font-semibold text-gray-800 mb-6">Benefits of Credit Card Loan</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-6">Benefits of Device Financing</h3>
               <ul className="space-y-4">
                 {features.map((feature, index) => (
                   <motion.li 
@@ -266,16 +323,16 @@ const CreditCardLoanPage = () => {
                 <h3 className="font-semibold text-xl mb-3">Eligibility Criteria</h3>
                 <ul className="space-y-2">
                   <li className="flex items-center">
-                    <FaCheck className="mr-2" /> Active credit card for 6+ months
+                    <FaCheck className="mr-2" /> Age: 18-65 years
                   </li>
                   <li className="flex items-center">
-                    <FaCheck className="mr-2" /> Good repayment history
+                    <FaCheck className="mr-2" /> Minimum income ₹15,000/month
                   </li>
                   <li className="flex items-center">
-                    <FaCheck className="mr-2" /> Minimum credit limit ₹50,000
+                    <FaCheck className="mr-2" /> Valid ID and address proof
                   </li>
                   <li className="flex items-center">
-                    <FaCheck className="mr-2" /> Indian resident
+                    <FaCheck className="mr-2" /> Device must be from partner retailer
                   </li>
                 </ul>
               </div>
@@ -284,30 +341,60 @@ const CreditCardLoanPage = () => {
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* Device Types */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">How It Works</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">Get your credit card loan in just 3 simple steps</p>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Devices You Can Finance</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">From smartphones to home appliances</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {deviceTypes.map((device, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ y: -5 }}
+                className="bg-white p-6 rounded-xl shadow-sm text-center hover:shadow-md transition-shadow"
+              >
+                <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-indigo-600 text-2xl">
+                  {device.icon}
+                </div>
+                <h3 className="font-medium text-gray-800">{device.name}</h3>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">How It Works</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">Get your device in 4 simple steps</p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
             {[
               {
-                title: "Check Offer",
-                desc: "See your pre-approved offer amount in seconds",
+                title: "Select Device",
+                desc: "Choose your device at any partner store or online",
                 icon: "1"
               },
               {
-                title: "Enter Details",
-                desc: "Provide basic details and choose repayment tenure",
+                title: "Apply In-Store",
+                desc: "Complete 2-minute application with store executive",
                 icon: "2"
               },
               {
-                title: "Receive Money",
-                desc: "Get funds transferred to your bank account instantly",
+                title: "Instant Approval",
+                desc: "Get approval decision within minutes",
                 icon: "3"
+              },
+              {
+                title: "Take It Home",
+                desc: "Walk out with your device immediately after approval",
+                icon: "4"
               }
             ].map((step, index) => (
               <motion.div 
@@ -316,7 +403,7 @@ const CreditCardLoanPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow"
+                className="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow border border-gray-100"
               >
                 <div className="w-16 h-16 bg-indigo-100 text-indigo-600 font-bold text-2xl rounded-full flex items-center justify-center mx-auto mb-6">
                   {step.icon}
@@ -330,11 +417,11 @@ const CreditCardLoanPage = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">What Our Customers Say</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">Trusted by thousands of credit card holders across India</p>
+            <p className="text-gray-600 max-w-2xl mx-auto">Trusted by tech enthusiasts across India</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -342,11 +429,11 @@ const CreditCardLoanPage = () => {
               <motion.div 
                 key={index}
                 whileHover={{ y: -10 }}
-                className="bg-gray-50 p-6 rounded-xl border border-gray-200"
+                className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm"
               >
                 <div className="flex items-center mb-4">
                   <img 
-                    src={`https://randomuser.me/api/portraits/${index % 2 === 0 ? 'men' : 'women'}/${index+30}.jpg`} 
+                    src={testimonial.img} 
                     alt={testimonial.name}
                     className="w-12 h-12 rounded-full mr-4"
                   />
@@ -375,11 +462,11 @@ const CreditCardLoanPage = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">Find answers to common questions about credit card loans</p>
+            <p className="text-gray-600 max-w-2xl mx-auto">Find answers to common questions about device financing</p>
           </div>
           
           <div className="max-w-3xl mx-auto">
@@ -394,7 +481,7 @@ const CreditCardLoanPage = () => {
               >
                 <button 
                   onClick={() => toggleFaq(index)}
-                  className="flex justify-between items-center w-full p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow text-left"
+                  className="flex justify-between items-center w-full p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors text-left"
                 >
                   <h3 className="font-medium text-gray-800">{faq.question}</h3>
                   <svg 
@@ -413,9 +500,9 @@ const CreditCardLoanPage = () => {
                     opacity: activeFaq === index ? 1 : 0
                   }}
                   transition={{ duration: 0.3 }}
-                  className="px-4 bg-white rounded-b-lg overflow-hidden"
+                  className="px-4 bg-gray-50 rounded-b-lg overflow-hidden"
                 >
-                  <p className="py-4 text-gray-600 border-t border-gray-100">{faq.answer}</p>
+                  <p className="py-4 text-gray-600 border-t border-gray-200">{faq.answer}</p>
                 </motion.div>
               </motion.div>
             ))}
@@ -426,19 +513,20 @@ const CreditCardLoanPage = () => {
       {/* CTA */}
       <section className="py-16 bg-indigo-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Access Your Credit Limit?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">Convert your credit card limit to cash today with instant approval</p>
+          <h2 className="text-3xl font-bold mb-6">Upgrade Your Tech Today</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">Get the latest devices with easy EMIs and instant approval</p>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-white text-indigo-600 font-semibold py-3 px-8 rounded-lg shadow-lg"
           >
-            Check Offer Now
+            Apply Now
           </motion.button>
+          <p className="mt-4 text-indigo-100">*Terms and conditions apply</p>
         </div>
       </section>
     </div>
   );
 };
 
-export default CreditCardLoanPage;
+export default ElectricDeviceLoanPage;
