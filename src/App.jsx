@@ -49,7 +49,6 @@ function App() {
         <Route path="/vehiclecal" element={<VehicleLoanCalculator/>} />
         <Route path="/emical" element={<LoanAgainstPropertyCalculator/>} />
         <Route path="/agriculturecal" element={<AgricultureLoanCalculator/>} />
-        <Route path="/agriculturecal" element={<AgricultureLoanCalculator/>} />
 
       </Routes>
     </BrowserRouter>

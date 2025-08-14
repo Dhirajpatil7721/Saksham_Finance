@@ -78,7 +78,7 @@
 
 //   return (
 //     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      
+
 //       {/* Hero Section */}
 //       <section className="relative overflow-hidden">
 //         <div className="container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center">
@@ -125,7 +125,7 @@
 //               </div>
 //             </div>
 //           </motion.div>
-          
+
 //           <motion.div 
 //             initial={{ opacity: 0, x: 50 }}
 //             animate={{ opacity: 1, x: 0 }}
@@ -166,7 +166,7 @@
 //             <h2 className="text-3xl font-bold text-gray-800 mb-4">Vehicles We Finance</h2>
 //             <p className="text-gray-600 max-w-2xl mx-auto">Loans available for all vehicle types</p>
 //           </div>
-          
+
 //           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
 //             {coveredVehicles.map((vehicle, index) => (
 //               <motion.div
@@ -197,6 +197,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaCheck, FaCalculator, FaCar, FaMotorcycle, FaTruck, FaKey } from 'react-icons/fa';
 import { MdOutlinePayments, MdDirectionsCar } from 'react-icons/md';
+import { useNavigate } from 'react-router-dom';
 
 const VehicleLoanPage = () => {
   const [loanAmount, setLoanAmount] = useState(500000);
@@ -295,12 +296,13 @@ const VehicleLoanPage = () => {
     { name: "Commercial Vehicles", icon: <FaTruck className="text-2xl" /> },
   ];
 
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -313,19 +315,19 @@ const VehicleLoanPage = () => {
               Drive your dream vehicle today with our quick and affordable loans for new, used, and commercial vehicles.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
+              <button onClick={()=>navigate('/form')} className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
                 Apply Now
               </button>
-              <button className="border-2 border-indigo-600 text-indigo-600 font-semibold py-3 px-6 rounded-lg hover:bg-indigo-50 transition duration-300 transform hover:scale-105">
+              <button onClick={() => navigate('/vehiclecal')} className="border-2 border-indigo-600 text-indigo-600 font-semibold py-3 px-6 rounded-lg hover:bg-indigo-50 transition duration-300 transform hover:scale-105">
                 Calculate EMI
               </button>
             </div>
             <div className="mt-10 flex items-center space-x-4">
               <div className="flex -space-x-2">
                 {[1, 2, 3].map((item) => (
-                  <img 
+                  <img
                     key={item}
-                    src={`https://randomuser.me/api/portraits/${item % 2 === 0 ? 'men' : 'women'}/${item+50}.jpg`} 
+                    src={`https://randomuser.me/api/portraits/${item % 2 === 0 ? 'men' : 'women'}/${item + 50}.jpg`}
                     alt="Happy customer"
                     className="w-10 h-10 rounded-full border-2 border-white"
                   />
@@ -343,19 +345,19 @@ const VehicleLoanPage = () => {
               </div>
             </div>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="md:w-1/2 relative"
           >
-            <img 
-              src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=800&q=80" 
+            <img
+              src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=800&q=80"
               alt="Car loan"
               className="w-full max-w-lg mx-auto rounded-xl shadow-2xl"
             />
-            <motion.div 
+            <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity }}
               className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg hidden md:block"
@@ -381,16 +383,16 @@ const VehicleLoanPage = () => {
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Vehicle Loan Calculator</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">Calculate your EMI based on your vehicle choice</p>
           </div>
-          
+
           <div className="flex flex-col lg:flex-row gap-8">
             <div className="lg:w-1/2 bg-indigo-50 p-8 rounded-2xl shadow-md">
               <div className="mb-8">
                 <label className="block text-gray-700 font-medium mb-2">Loan Amount (₹)</label>
                 <div className="flex items-center">
-                  <input 
-                    type="range" 
-                    min="100000" 
-                    max="5000000" 
+                  <input
+                    type="range"
+                    min="100000"
+                    max="5000000"
                     step="10000"
                     value={loanAmount}
                     onChange={(e) => setLoanAmount(e.target.value)}
@@ -405,14 +407,14 @@ const VehicleLoanPage = () => {
                   <span>₹50L</span>
                 </div>
               </div>
-              
+
               <div className="mb-8">
                 <label className="block text-gray-700 font-medium mb-2">Interest Rate (%)</label>
                 <div className="flex items-center">
-                  <input 
-                    type="range" 
-                    min="7" 
-                    max="15" 
+                  <input
+                    type="range"
+                    min="7"
+                    max="15"
                     step="0.1"
                     value={interestRate}
                     onChange={(e) => setInterestRate(e.target.value)}
@@ -427,14 +429,14 @@ const VehicleLoanPage = () => {
                   <span>15%</span>
                 </div>
               </div>
-              
+
               <div className="mb-8">
                 <label className="block text-gray-700 font-medium mb-2">Loan Term (years)</label>
                 <div className="flex items-center">
-                  <input 
-                    type="range" 
-                    min="1" 
-                    max="7" 
+                  <input
+                    type="range"
+                    min="1"
+                    max="7"
                     step="1"
                     value={loanTerm}
                     onChange={(e) => setLoanTerm(e.target.value)}
@@ -449,7 +451,7 @@ const VehicleLoanPage = () => {
                   <span>7</span>
                 </div>
               </div>
-              
+
               <div className="bg-white p-6 rounded-xl shadow-inner">
                 <div className="flex justify-between items-center mb-4">
                   <div>
@@ -463,21 +465,21 @@ const VehicleLoanPage = () => {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <p className="text-gray-600 text-sm">Total Interest</p>
-                    <p className="font-medium">₹{(calculateEMI() * loanTerm * 12 - loanAmount).toLocaleString('en-IN', {maximumFractionDigits: 0})}</p>
+                    <p className="font-medium">₹{(calculateEMI() * loanTerm * 12 - loanAmount).toLocaleString('en-IN', { maximumFractionDigits: 0 })}</p>
                   </div>
                   <div>
                     <p className="text-gray-600 text-sm">Total Payment</p>
-                    <p className="font-medium">₹{(calculateEMI() * loanTerm * 12).toLocaleString('en-IN', {maximumFractionDigits: 0})}</p>
+                    <p className="font-medium">₹{(calculateEMI() * loanTerm * 12).toLocaleString('en-IN', { maximumFractionDigits: 0 })}</p>
                   </div>
                 </div>
               </div>
             </div>
-            
+
             <div className="lg:w-1/2">
               <h3 className="text-xl font-semibold text-gray-800 mb-6">Benefits of Vehicle Loan</h3>
               <ul className="space-y-4">
                 {features.map((feature, index) => (
-                  <motion.li 
+                  <motion.li
                     key={index}
                     whileHover={{ scale: 1.02 }}
                     className="bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition-shadow"
@@ -494,7 +496,7 @@ const VehicleLoanPage = () => {
                   </motion.li>
                 ))}
               </ul>
-              
+
               <div className="mt-8 bg-indigo-600 text-white p-6 rounded-xl">
                 <h3 className="font-semibold text-xl mb-3">Eligibility Criteria</h3>
                 <ul className="space-y-2">
@@ -524,7 +526,7 @@ const VehicleLoanPage = () => {
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Vehicles We Finance</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">Loans available for all vehicle types</p>
           </div>
-          
+
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {coveredVehicles.map((vehicle, index) => (
               <motion.div
@@ -549,7 +551,7 @@ const VehicleLoanPage = () => {
             <h2 className="text-3xl font-bold text-gray-800 mb-4">How It Works</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">Get your vehicle loan in 4 simple steps</p>
           </div>
-          
+
           <div className="grid md:grid-cols-4 gap-8">
             {[
               {
@@ -573,7 +575,7 @@ const VehicleLoanPage = () => {
                 icon: "4"
               }
             ].map((step, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -599,17 +601,17 @@ const VehicleLoanPage = () => {
             <h2 className="text-3xl font-bold text-gray-800 mb-4">What Our Customers Say</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">Trusted by vehicle owners across India</p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 whileHover={{ y: -10 }}
                 className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm"
               >
                 <div className="flex items-center mb-4">
-                  <img 
-                    src={testimonial.img} 
+                  <img
+                    src={testimonial.img}
                     alt={testimonial.name}
                     className="w-12 h-12 rounded-full mr-4"
                   />
@@ -621,10 +623,10 @@ const VehicleLoanPage = () => {
                 <p className="text-gray-700 mb-4">"{testimonial.content}"</p>
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
-                    <svg 
-                      key={i} 
-                      className={`w-5 h-5 ${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-300'}`} 
-                      fill="currentColor" 
+                    <svg
+                      key={i}
+                      className={`w-5 h-5 ${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-300'}`}
+                      fill="currentColor"
                       viewBox="0 0 20 20"
                     >
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -644,10 +646,10 @@ const VehicleLoanPage = () => {
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">Find answers to common questions about vehicle loans</p>
           </div>
-          
+
           <div className="max-w-3xl mx-auto">
             {faqs.map((faq, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -655,23 +657,23 @@ const VehicleLoanPage = () => {
                 viewport={{ once: true }}
                 className="mb-4 overflow-hidden"
               >
-                <button 
+                <button
                   onClick={() => toggleFaq(index)}
                   className="flex justify-between items-center w-full p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors text-left"
                 >
                   <h3 className="font-medium text-gray-800">{faq.question}</h3>
-                  <svg 
+                  <svg
                     className={`w-5 h-5 text-indigo-600 transition-transform duration-300 ${activeFaq === index ? 'transform rotate-180' : ''}`}
-                    fill="none" 
-                    viewBox="0 0 24 24" 
+                    fill="none"
+                    viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <motion.div 
+                <motion.div
                   initial={{ height: 0, opacity: 0 }}
-                  animate={{ 
+                  animate={{
                     height: activeFaq === index ? 'auto' : 0,
                     opacity: activeFaq === index ? 1 : 0
                   }}

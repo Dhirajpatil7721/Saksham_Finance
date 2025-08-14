@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaCheck, FaHome, FaCalculator, FaPiggyBank, FaClipboardCheck } from 'react-icons/fa';
 import { MdRealEstateAgent, MdOutlineVerifiedUser, MdEmojiPeople } from 'react-icons/md';
+import { useNavigate } from 'react-router-dom';
 
 const HomeLoanPage = () => {
   const [propertyValue, setPropertyValue] = useState(5000000);
@@ -112,6 +113,8 @@ const HomeLoanPage = () => {
     }
   ];
 
+
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       {/* Hero Section */}
@@ -130,10 +133,10 @@ const HomeLoanPage = () => {
               Get home loans up to ₹10 crores at attractive interest rates starting from 8.4% p.a. with flexible repayment up to 30 years.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
+              <button onClick={()=>navigate('/form')} className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
                 Apply for Home Loan
               </button>
-              <button className="border-2 border-indigo-600 text-indigo-600 font-semibold py-3 px-6 rounded-lg hover:bg-indigo-50 transition duration-300 transform hover:scale-105">
+              <button onClick={()=>navigate('/homecal')} className="border-2 border-indigo-600 text-indigo-600 font-semibold py-3 px-6 rounded-lg hover:bg-indigo-50 transition duration-300 transform hover:scale-105">
                 Calculate EMI
               </button>
             </div>

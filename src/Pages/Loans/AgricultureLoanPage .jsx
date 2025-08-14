@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaCheck, FaTractor, FaCalculator, FaSeedling, FaHandHoldingUsd } from 'react-icons/fa';
 import { GiFarmTractor, GiFarmer, GiPlantWatering } from 'react-icons/gi';
+import { Navigate, useNavigate } from 'react-router-dom';
+
 
 const AgricultureLoanPage = () => {
   const [landValue, setLandValue] = useState(1000000);
@@ -25,6 +27,7 @@ const AgricultureLoanPage = () => {
     return ((loanAmount / landValue) * 100).toFixed(1);
   };
 
+  const nevigate =useNavigate()
   const agriLoanFeatures = [
     {
       icon: <FaSeedling className="text-3xl" />,
@@ -129,10 +132,10 @@ const AgricultureLoanPage = () => {
               Agriculture loans up to ₹50 lakhs with low interest and flexible repayment for farmers and agripreneurs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
+              <button onClick={()=>nevigate('/form')} className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
                 Apply for Agriculture Loan
               </button>
-              <button className="border-2 border-green-600 text-green-600 font-semibold py-3 px-6 rounded-lg hover:bg-green-50 transition duration-300 transform hover:scale-105">
+              <button onClick={()=>nevigate('/agriculturecal')} className="border-2 border-green-600 text-green-600 font-semibold py-3 px-6 rounded-lg hover:bg-green-50 transition duration-300 transform hover:scale-105">
                Calculate EMI
               </button>
             </div>
