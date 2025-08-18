@@ -1,6 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import backgroundImage from '../assets/HomeBg.png';
+// import backgroundImage from '../assets/HomeBg.png';
+// import backgroundImage from '../assets/bg2.jpg';
+// import backgroundImage from '../assets/bg3.jpg';
+// import backgroundImage from '../assets/bg4.jpg';
+import backgroundImage from '../assets/bg5.jpg';
 
 function Home() {
   // Animation variants

@@ -37,11 +37,11 @@
 //           <div className="flex items-center">
 //             <div className="flex-shrink-0">
 //               <Link to="/" className="text-white font-bold text-xl">
-//                 MyLoans
+//                 Saksham Finance
 //               </Link>
 //             </div>
 //             <div className="hidden md:block">
-//               <div className="ml-10 flex items-baseline space-x-4">
+//               <div className="ml-10 flex flex-end items-baseline space-x-4">
 //                 <Link
 //                   to="/"
 //                   className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
@@ -82,52 +82,63 @@
 //                   </div>
 
 //                   {showDropdown && (
-//                     <div className="absolute left-0 mt-2 w-[700px] bg-white text-black rounded-lg shadow-2xl z-50 p-4 border border-gray-200 animate-fadeIn">
-//                       <div className="grid grid-cols-3 gap-4">
+//                     <div className="absolute left-0 mt-2 w-[700px] bg-white text-black rounded-lg shadow-2xl z-50 p-3 border border-gray-200 animate-fadeIn">
+//                       <div className="grid grid-cols-4 gap-2">
 //                         <Link
 //                           to="/Personalloan"
-//                           className="block p-3 hover:bg-gray-50 rounded-lg border border-gray-100 transition-all duration-200 hover:shadow-md hover:scale-[1.02]"
+//                           className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
 //                         >
-//                           <div className="font-semibold">Personal Loan</div>
-//                           <div className="text-xs text-gray-500 mt-1">Get up to ₹10L in 10 mins</div>
-//                         </Link>
-//                         <Link
-//                           to="/businessloan"
-//                           className="block p-3 hover:bg-gray-50 rounded-lg border border-gray-100 transition-all duration-200 hover:shadow-md hover:scale-[1.02]"
-//                         >
-//                           <div className="font-semibold">Business Loan</div>
-//                           <div className="text-xs text-gray-500 mt-1">Get up to ₹5L with 60M tenure</div>
+//                           <div className="font-semibold text-sm">Personal Loan</div>
+//                           <div className="text-xs text-gray-500 mt-1">Up to ₹10L in 10 mins</div>
 //                         </Link>
 //                         <Link
 //                           to="/homeloan"
-//                           className="block p-3 hover:bg-gray-50 rounded-lg border border-gray-100 transition-all duration-200 hover:shadow-md hover:scale-[1.02]"
+//                           className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
 //                         >
-//                           <div className="font-semibold">Home Loan</div>
-//                           <div className="text-xs text-gray-500 mt-1">Interest starts from 7.75%* p.a.</div>
+//                           <div className="font-semibold text-sm">Home Loan</div>
+//                           <div className="text-xs text-gray-500 mt-1">From 7.75%* p.a.</div>
 //                         </Link>
-//                       </div>
-
-//                       <div className="grid grid-cols-3 gap-4 mt-4">
 //                         <Link
 //                           to="/businessloan"
-//                           className="block p-3 hover:bg-gray-50 rounded-lg border border-gray-100 transition-all duration-200 hover:shadow-md hover:scale-[1.02]"
+//                           className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
 //                         >
-//                           <div className="font-semibold">Business Loan</div>
-//                           <div className="text-xs text-gray-500 mt-1">Lifetime FREE cards with up to ₹5L limit</div>
+//                           <div className="font-semibold text-sm">Business Loan</div>
+//                           <div className="text-xs text-gray-500 mt-1">Up to ₹5L</div>
 //                         </Link>
+//                         <Link
+//                           to="/educationloan"
+//                           className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
+//                         >
+//                           <div className="font-semibold text-sm">Education Loan</div>
+//                           <div className="text-xs text-gray-500 mt-1">Study abroad</div>
+//                         </Link>
+//                         <Link
+//                           to="/vehicalloan"
+//                           className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
+//                         >
+//                           <div className="font-semibold text-sm">Vehicle Loan</div>
+//                           <div className="text-xs text-gray-500 mt-1">100% financing</div>
+//                         </Link>
+//                         <Link
+//                           to="/agriculturepage"
+//                           className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
+//                         >
+//                           <div className="font-semibold text-sm">Agriculture Loan</div>
+//                           <div className="text-xs text-gray-500 mt-1">Farmers schemes</div>
+//                         </Link>
+//                         {/* <Link
+//                           to="/goldloan"
+//                           className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
+//                         >
+//                           <div className="font-semibold text-sm">Gold Loan</div>
+//                           <div className="text-xs text-gray-500 mt-1">Instant loans</div>
+//                         </Link> */}
 //                         <Link
 //                           to="/loanagainstpropartyloan"
-//                           className="block p-3 hover:bg-gray-50 rounded-lg border border-gray-100 transition-all duration-200 hover:shadow-md hover:scale-[1.02]"
+//                           className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
 //                         >
-//                           <div className="font-semibold">Loan Against Property</div>
-//                           <div className="text-xs text-gray-500 mt-1">Up to ₹75L without ITR</div>
-//                         </Link>
-//                         <Link
-//                           to="/emical"
-//                           className="block p-3 hover:bg-gray-50 rounded-lg border border-gray-100 transition-all duration-200 hover:shadow-md hover:scale-[1.02]"
-//                         >
-//                           <div className="font-semibold">EMI Calculator</div>
-//                           <div className="text-xs text-gray-500 mt-1">Universal calculator for all loan types</div>
+//                           <div className="font-semibold text-sm">Loan Against Property</div>
+//                           <div className="text-xs text-gray-500 mt-1">All loan types</div>
 //                         </Link>
 //                       </div>
 //                     </div>
@@ -167,52 +178,63 @@
 //                   </div>
 
 //                   {showCalcDropdown && (
-//                     <div className="absolute left-0 mt-2 w-[700px] bg-white text-black rounded-lg shadow-2xl z-50 p-4 border border-gray-200 animate-fadeIn">
-//                       <div className="grid grid-cols-3 gap-4">
+//                     <div className="absolute left-0 mt-2 w-[700px] bg-white text-black rounded-lg shadow-2xl z-50 p-3 border border-gray-200 animate-fadeIn">
+//                       <div className="grid grid-cols-4 gap-2">
 //                         <Link
 //                           to="/persnolcal"
-//                           className="block p-3 hover:bg-gray-50 rounded-lg border border-gray-100 transition-all duration-200 hover:shadow-md hover:scale-[1.02]"
+//                           className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
 //                         >
-//                           <div className="font-semibold">Personal Loan Calculator</div>
-//                           <div className="text-xs text-gray-500 mt-1">Calculate EMI, interest & tenure</div>
+//                           <div className="font-semibold text-sm">Personal Loan</div>
+//                           <div className="text-xs text-gray-500 mt-1">EMI calculator</div>
 //                         </Link>
 //                         <Link
 //                           to="/homecal"
-//                           className="block p-3 hover:bg-gray-50 rounded-lg border border-gray-100 transition-all duration-200 hover:shadow-md hover:scale-[1.02]"
+//                           className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
 //                         >
-//                           <div className="font-semibold">Home Loan Calculator</div>
-//                           <div className="text-xs text-gray-500 mt-1">Plan your home loan with EMI breakdown</div>
+//                           <div className="font-semibold text-sm">Home Loan</div>
+//                           <div className="text-xs text-gray-500 mt-1">EMI breakdown</div>
 //                         </Link>
 //                         <Link
 //                           to="/businesscal"
-//                           className="block p-3 hover:bg-gray-50 rounded-lg border border-gray-100 transition-all duration-200 hover:shadow-md hover:scale-[1.02]"
+//                           className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
 //                         >
-//                           <div className="font-semibold">Business Loan Calculator</div>
-//                           <div className="text-xs text-gray-500 mt-1">Estimate business loan EMIs</div>
-//                         </Link>
-//                       </div>
-
-//                       <div className="grid grid-cols-3 gap-4 mt-4">
-//                         <Link
-//                           to="/creditcardcal"
-//                           className="block p-3 hover:bg-gray-50 rounded-lg border border-gray-100 transition-all duration-200 hover:shadow-md hover:scale-[1.02]"
-//                         >
-//                           <div className="font-semibold">Business Loan Calculator</div>
-//                           <div className="text-xs text-gray-500 mt-1">Calculate interest & payments</div>
+//                           <div className="font-semibold text-sm">Business Loan</div>
+//                           <div className="text-xs text-gray-500 mt-1">EMI estimates</div>
 //                         </Link>
 //                         <Link
-//                           to="/loanagainstproprtycal"
-//                           className="block p-3 hover:bg-gray-50 rounded-lg border border-gray-100 transition-all duration-200 hover:shadow-md hover:scale-[1.02]"
+//                           to="/educationcal"
+//                           className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
 //                         >
-//                           <div className="font-semibold">Loan Against Property Calculator</div>
-//                           <div className="text-xs text-gray-500 mt-1">Estimate LAP EMIs & eligibility</div>
+//                           <div className="font-semibold text-sm">Education Loan</div>
+//                           <div className="text-xs text-gray-500 mt-1">Financing plan</div>
 //                         </Link>
+//                         <Link
+//                           to="/vehiclecal"
+//                           className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
+//                         >
+//                           <div className="font-semibold text-sm">Vehicle Loan</div>
+//                           <div className="text-xs text-gray-500 mt-1">Auto loan EMIs</div>
+//                         </Link>
+//                         <Link
+//                           to="/agriculturecal"
+//                           className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
+//                         >
+//                           <div className="font-semibold text-sm">Agriculture Loan</div>
+//                           <div className="text-xs text-gray-500 mt-1">Farm loan estimates</div>
+//                         </Link>
+//                         {/* <Link
+//                           to="/goldcal"
+//                           className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
+//                         >
+//                           <div className="font-semibold text-sm">Gold Loan</div>
+//                           <div className="text-xs text-gray-500 mt-1">Loan against gold</div>
+//                         </Link> */}
 //                         <Link
 //                           to="/emical"
-//                           className="block p-3 hover:bg-gray-50 rounded-lg border border-gray-100 transition-all duration-200 hover:shadow-md hover:scale-[1.02]"
+//                           className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
 //                         >
-//                           <div className="font-semibold">EMI Calculator</div>
-//                           <div className="text-xs text-gray-500 mt-1">Universal calculator for all loan types</div>
+//                           <div className="font-semibold text-sm">Loan Against Property</div>
+//                           <div className="text-xs text-gray-500 mt-1">All loan types</div>
 //                         </Link>
 //                       </div>
 //                     </div>
@@ -308,62 +330,97 @@
 //               </svg>
 //             </button>
 
-//             <div className={`ml-4 mt-1 space-y-1 transition-all duration-300 overflow-hidden ${showMobileDropdown ? 'max-h-96' : 'max-h-0'}`}>
-//               <Link
-//                 to="/Personalloan"
-//                 className="block px-3 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
-//                 onClick={() => {
-//                   setIsOpen(false);
-//                   setShowMobileDropdown(false);
-//                 }}
-//               >
-//                 <div className="font-medium">Personal Loan</div>
-//                 <div className="text-xs text-gray-300 mt-1">Get up to ₹10L in 10 mins</div>
-//               </Link>
-//               <Link
-//                 to="/businessloan"
-//                 className="block px-3 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
-//                 onClick={() => {
-//                   setIsOpen(false);
-//                   setShowMobileDropdown(false);
-//                 }}
-//               >
-//                 <div className="font-medium">Business Loan</div>
-//                 <div className="text-xs text-gray-300 mt-1">Get up to ₹5L with 60M tenure</div>
-//               </Link>
-//               <Link
-//                 to="/homeloan"
-//                 className="block px-3 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
-//                 onClick={() => {
-//                   setIsOpen(false);
-//                   setShowMobileDropdown(false);
-//                 }}
-//               >
-//                 <div className="font-medium">Home Loan</div>
-//                 <div className="text-xs text-gray-300 mt-1">Interest starts from 7.75%* p.a.</div>
-//               </Link>
-//               <Link
-//                 to="/creditcardloan"
-//                 className="block px-3 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
-//                 onClick={() => {
-//                   setIsOpen(false);
-//                   setShowMobileDropdown(false);
-//                 }}
-//               >
-//                 <div className="font-medium">Credit Card</div>
-//                 <div className="text-xs text-gray-300 mt-1">Lifetime FREE cards with up to ₹5L limit</div>
-//               </Link>
-//               <Link
-//                 to="/loanagainstpropartyloan"
-//                 className="block px-3 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
-//                 onClick={() => {
-//                   setIsOpen(false);
-//                   setShowMobileDropdown(false);
-//                 }}
-//               >
-//                 <div className="font-medium">Loan Against Property</div>
-//                 <div className="text-xs text-gray-300 mt-1">Up to ₹75L without ITR</div>
-//               </Link>
+//             <div className={`ml-4 mt-1 transition-all duration-300 overflow-hidden ${showMobileDropdown ? 'max-h-96' : 'max-h-0'}`}>
+//               <div className="grid grid-cols-2 gap-2">
+//                 <Link
+//                   to="/Personalloan"
+//                   className="block px-2 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
+//                   onClick={() => {
+//                     setIsOpen(false);
+//                     setShowMobileDropdown(false);
+//                   }}
+//                 >
+//                   <div className="font-medium text-sm">Personal Loan</div>
+//                   <div className="text-xs text-gray-300 mt-1">Up to ₹10L</div>
+//                 </Link>
+//                 <Link
+//                   to="/homeloan"
+//                   className="block px-2 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
+//                   onClick={() => {
+//                     setIsOpen(false);
+//                     setShowMobileDropdown(false);
+//                   }}
+//                 >
+//                   <div className="font-medium text-sm">Home Loan</div>
+//                   <div className="text-xs text-gray-300 mt-1">From 7.75%*</div>
+//                 </Link>
+//                 <Link
+//                   to="/businessloan"
+//                   className="block px-2 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
+//                   onClick={() => {
+//                     setIsOpen(false);
+//                     setShowMobileDropdown(false);
+//                   }}
+//                 >
+//                   <div className="font-medium text-sm">Business Loan</div>
+//                   <div className="text-xs text-gray-300 mt-1">Up to ₹5L</div>
+//                 </Link>
+//                 <Link
+//                   to="/educationloan"
+//                   className="block px-2 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
+//                   onClick={() => {
+//                     setIsOpen(false);
+//                     setShowMobileDropdown(false);
+//                   }}
+//                 >
+//                   <div className="font-medium text-sm">Education Loan</div>
+//                   <div className="text-xs text-gray-300 mt-1">Study abroad</div>
+//                 </Link>
+//                 <Link
+//                   to="/vehicloan"
+//                   className="block px-2 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
+//                   onClick={() => {
+//                     setIsOpen(false);
+//                     setShowMobileDropdown(false);
+//                   }}
+//                 >
+//                   <div className="font-medium text-sm">Vehicle Loan</div>
+//                   <div className="text-xs text-gray-300 mt-1">100% finance</div>
+//                 </Link>
+//                 <Link
+//                   to="/agricultureloan"
+//                   className="block px-2 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
+//                   onClick={() => {
+//                     setIsOpen(false);
+//                     setShowMobileDropdown(false);
+//                   }}
+//                 >
+//                   <div className="font-medium text-sm">Agriculture Loan</div>
+//                   <div className="text-xs text-gray-300 mt-1">Farm schemes</div>
+//                 </Link>
+//                 {/* <Link
+//                   to="/goldloan"
+//                   className="block px-2 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
+//                   onClick={() => {
+//                     setIsOpen(false);
+//                     setShowMobileDropdown(false);
+//                   }}
+//                 >
+//                   <div className="font-medium text-sm">Gold Loan</div>
+//                   <div className="text-xs text-gray-300 mt-1">Instant loans</div>
+//                 </Link> */}
+//                 <Link
+//                   to="/emical"
+//                   className="block px-2 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
+//                   onClick={() => {
+//                     setIsOpen(false);
+//                     setShowMobileDropdown(false);
+//                   }}
+//                 >
+//                   <div className="font-medium text-sm">Loan Against Property</div>
+//                   <div className="text-xs text-gray-300 mt-1">All loans</div>
+//                 </Link>
+//               </div>
 //             </div>
 //           </div>
 
@@ -389,73 +446,97 @@
 //               </svg>
 //             </button>
 
-//             <div className={`ml-4 mt-1 space-y-1 transition-all duration-300 overflow-hidden ${showMobileCalcDropdown ? 'max-h-96' : 'max-h-0'}`}>
-//               <Link
-//                 to="/persnolcal"
-//                 className="block px-3 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
-//                 onClick={() => {
-//                   setIsOpen(false);
-//                   setShowMobileCalcDropdown(false);
-//                 }}
-//               >
-//                 <div className="font-medium">Personal Loan Calculator</div>
-//                 <div className="text-xs text-gray-300 mt-1">Calculate EMI, interest & tenure</div>
-//               </Link>
-//               <Link
-//                 to="/homecal"
-//                 className="block px-3 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
-//                 onClick={() => {
-//                   setIsOpen(false);
-//                   setShowMobileCalcDropdown(false);
-//                 }}
-//               >
-//                 <div className="font-medium">Home Loan Calculator</div>
-//                 <div className="text-xs text-gray-300 mt-1">Plan your home loan with EMI breakdown</div>
-//               </Link>
-//               <Link
-//                 to="/businesscal"
-//                 className="block px-3 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
-//                 onClick={() => {
-//                   setIsOpen(false);
-//                   setShowMobileCalcDropdown(false);
-//                 }}
-//               >
-//                 <div className="font-medium">Business Loan Calculator</div>
-//                 <div className="text-xs text-gray-300 mt-1">Estimate business loan EMIs</div>
-//               </Link>
-//               <Link
-//                 to="/creditcardcal"
-//                 className="block px-3 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
-//                 onClick={() => {
-//                   setIsOpen(false);
-//                   setShowMobileCalcDropdown(false);
-//                 }}
-//               >
-//                 <div className="font-medium">Credit Card Calculator</div>
-//                 <div className="text-xs text-gray-300 mt-1">Calculate interest & payments</div>
-//               </Link>
-//               <Link
-//                 to="/loanagainstproprtycal"
-//                 className="block px-3 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
-//                 onClick={() => {
-//                   setIsOpen(false);
-//                   setShowMobileCalcDropdown(false);
-//                 }}
-//               >
-//                 <div className="font-medium">Loan Against Property Calculator</div>
-//                 <div className="text-xs text-gray-300 mt-1">Estimate LAP EMIs & eligibility</div>
-//               </Link>
-//               <Link
-//                 to="/emical"
-//                 className="block px-3 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
-//                 onClick={() => {
-//                   setIsOpen(false);
-//                   setShowMobileCalcDropdown(false);
-//                 }}
-//               >
-//                 <div className="font-medium">EMI Calculator</div>
-//                 <div className="text-xs text-gray-300 mt-1">Universal calculator for all loan types</div>
-//               </Link>
+//             <div className={`ml-4 mt-1 transition-all duration-300 overflow-hidden ${showMobileCalcDropdown ? 'max-h-96' : 'max-h-0'}`}>
+//               <div className="grid grid-cols-2 gap-2">
+//                 <Link
+//                   to="/persnolcal"
+//                   className="block px-2 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
+//                   onClick={() => {
+//                     setIsOpen(false);
+//                     setShowMobileCalcDropdown(false);
+//                   }}
+//                 >
+//                   <div className="font-medium text-sm">Personal Loan</div>
+//                   <div className="text-xs text-gray-300 mt-1">EMI calculator</div>
+//                 </Link>
+//                 <Link
+//                   to="/homecal"
+//                   className="block px-2 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
+//                   onClick={() => {
+//                     setIsOpen(false);
+//                     setShowMobileCalcDropdown(false);
+//                   }}
+//                 >
+//                   <div className="font-medium text-sm">Home Loan</div>
+//                   <div className="text-xs text-gray-300 mt-1">EMI breakdown</div>
+//                 </Link>
+//                 <Link
+//                   to="/businesscal"
+//                   className="block px-2 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
+//                   onClick={() => {
+//                     setIsOpen(false);
+//                     setShowMobileCalcDropdown(false);
+//                   }}
+//                 >
+//                   <div className="font-medium text-sm">Business Loan</div>
+//                   <div className="text-xs text-gray-300 mt-1">EMI estimates</div>
+//                 </Link>
+//                 <Link
+//                   to="/educationcal"
+//                   className="block px-2 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
+//                   onClick={() => {
+//                     setIsOpen(false);
+//                     setShowMobileCalcDropdown(false);
+//                   }}
+//                 >
+//                   <div className="font-medium text-sm">Education Loan</div>
+//                   <div className="text-xs text-gray-300 mt-1">Financing plan</div>
+//                 </Link>
+//                 <Link
+//                   to="/vehiclecal"
+//                   className="block px-2 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
+//                   onClick={() => {
+//                     setIsOpen(false);
+//                     setShowMobileCalcDropdown(false);
+//                   }}
+//                 >
+//                   <div className="font-medium text-sm">Vehicle Loan</div>
+//                   <div className="text-xs text-gray-300 mt-1">Auto loan EMIs</div>
+//                 </Link>
+//                 <Link
+//                   to="/agriculturecal"
+//                   className="block px-2 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
+//                   onClick={() => {
+//                     setIsOpen(false);
+//                     setShowMobileCalcDropdown(false);
+//                   }}
+//                 >
+//                   <div className="font-medium text-sm">Agriculture Loan</div>
+//                   <div className="text-xs text-gray-300 mt-1">Farm estimates</div>
+//                 </Link>
+//                 {/* <Link
+//                   to="/goldcal"
+//                   className="block px-2 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
+//                   onClick={() => {
+//                     setIsOpen(false);
+//                     setShowMobileCalcDropdown(false);
+//                   }}
+//                 >
+//                   <div className="font-medium text-sm">Gold Loan</div>
+//                   <div className="text-xs text-gray-300 mt-1">Loan against gold</div>
+//                 </Link> */}
+//                 <Link
+//                   to="/emical"
+//                   className="block px-2 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
+//                   onClick={() => {
+//                     setIsOpen(false);
+//                     setShowMobileCalcDropdown(false);
+//                   }}
+//                 >
+//                   <div className="font-medium text-sm">Loan Against Property</div>
+//                   <div className="text-xs text-gray-300 mt-1">All loan types</div>
+//                 </Link>
+//               </div>
 //             </div>
 //           </div>
 
@@ -474,7 +555,6 @@
 
 // export default Nav;
 
-
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
@@ -492,10 +572,8 @@ const Nav = () => {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down
         setVisible(false);
       } else {
-        // Scrolling up
         setVisible(true);
       }
 
@@ -510,221 +588,224 @@ const Nav = () => {
     <nav className={`bg-gray-800 fixed w-full z-50 transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo and main menu items */}
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <Link to="/" className="text-white font-bold text-xl">
-                MyLoans
+          {/* Logo on the left */}
+          <div className="flex-shrink-0">
+            <Link to="/" className="text-white font-bold text-xl flex items-center">
+              <img
+                src="/logo.png" // Replace with your logo path
+                // alt="Saksham Finance Logo" 
+                className="h-8 w-auto mr-2"
+              />
+              Saksham Finance
+            </Link>
+          </div>
+
+          {/* Navigation options on the right */}
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              <Link
+                to="/"
+                className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              >
+                Home
               </Link>
-            </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <Link
-                  to="/"
-                  className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
-                >
-                  Home
-                </Link>
 
-                {/* Desktop Loans Dropdown */}
-                <div
-                  className="relative"
-                  onMouseEnter={() => setShowDropdown(true)}
-                  onMouseLeave={() => setShowDropdown(false)}
-                >
-                  <div className="flex items-center">
-                    <Link
-                      to="#"
-                      className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setShowDropdown(!showDropdown);
-                      }}
-                    >
-                      Loans
-                    </Link>
-                    <svg
-                      className={`ml-1 h-4 w-4 text-gray-300 transition-transform duration-200 ${showDropdown ? 'rotate-180' : ''}`}
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </div>
-
-                  {showDropdown && (
-                    <div className="absolute left-0 mt-2 w-[700px] bg-white text-black rounded-lg shadow-2xl z-50 p-3 border border-gray-200 animate-fadeIn">
-                      <div className="grid grid-cols-4 gap-2">
-                        <Link
-                          to="/Personalloan"
-                          className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
-                        >
-                          <div className="font-semibold text-sm">Personal Loan</div>
-                          <div className="text-xs text-gray-500 mt-1">Up to ₹10L in 10 mins</div>
-                        </Link>
-                        <Link
-                          to="/homeloan"
-                          className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
-                        >
-                          <div className="font-semibold text-sm">Home Loan</div>
-                          <div className="text-xs text-gray-500 mt-1">From 7.75%* p.a.</div>
-                        </Link>
-                        <Link
-                          to="/businessloan"
-                          className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
-                        >
-                          <div className="font-semibold text-sm">Business Loan</div>
-                          <div className="text-xs text-gray-500 mt-1">Up to ₹5L</div>
-                        </Link>
-                        <Link
-                          to="/educationloan"
-                          className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
-                        >
-                          <div className="font-semibold text-sm">Education Loan</div>
-                          <div className="text-xs text-gray-500 mt-1">Study abroad</div>
-                        </Link>
-                        <Link
-                          to="/vehicalloan"
-                          className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
-                        >
-                          <div className="font-semibold text-sm">Vehicle Loan</div>
-                          <div className="text-xs text-gray-500 mt-1">100% financing</div>
-                        </Link>
-                        <Link
-                          to="/agriculturepage"
-                          className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
-                        >
-                          <div className="font-semibold text-sm">Agriculture Loan</div>
-                          <div className="text-xs text-gray-500 mt-1">Farmers schemes</div>
-                        </Link>
-                        {/* <Link
-                          to="/goldloan"
-                          className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
-                        >
-                          <div className="font-semibold text-sm">Gold Loan</div>
-                          <div className="text-xs text-gray-500 mt-1">Instant loans</div>
-                        </Link> */}
-                        <Link
-                          to="/loanagainstpropartyloan"
-                          className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
-                        >
-                          <div className="font-semibold text-sm">Loan Against Property</div>
-                          <div className="text-xs text-gray-500 mt-1">All loan types</div>
-                        </Link>
-                      </div>
-                    </div>
-                  )}
+              {/* Desktop Loans Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setShowDropdown(true)}
+                onMouseLeave={() => setShowDropdown(false)}
+              >
+                <div className="flex items-center">
+                  <Link
+                    to="#"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setShowDropdown(!showDropdown);
+                    }}
+                  >
+                    Loans
+                  </Link>
+                  <svg
+                    className={`ml-1 h-4 w-4 text-gray-300 transition-transform duration-200 ${showDropdown ? 'rotate-180' : ''}`}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
                 </div>
 
-                {/* Desktop Calculators Dropdown */}
-                <div
-                  className="relative"
-                  onMouseEnter={() => setShowCalcDropdown(true)}
-                  onMouseLeave={() => setShowCalcDropdown(false)}
-                >
-                  <div className="flex items-center">
-                    <Link
-                      to="#"
-                      className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setShowCalcDropdown(!showCalcDropdown);
-                      }}
-                    >
-                      Calculators
-                    </Link>
-                    <svg
-                      className={`ml-1 h-4 w-4 text-gray-300 transition-transform duration-200 ${showCalcDropdown ? 'rotate-180' : ''}`}
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </div>
-
-                  {showCalcDropdown && (
-                    <div className="absolute left-0 mt-2 w-[700px] bg-white text-black rounded-lg shadow-2xl z-50 p-3 border border-gray-200 animate-fadeIn">
-                      <div className="grid grid-cols-4 gap-2">
-                        <Link
-                          to="/persnolcal"
-                          className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
-                        >
-                          <div className="font-semibold text-sm">Personal Loan</div>
-                          <div className="text-xs text-gray-500 mt-1">EMI calculator</div>
-                        </Link>
-                        <Link
-                          to="/homecal"
-                          className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
-                        >
-                          <div className="font-semibold text-sm">Home Loan</div>
-                          <div className="text-xs text-gray-500 mt-1">EMI breakdown</div>
-                        </Link>
-                        <Link
-                          to="/businesscal"
-                          className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
-                        >
-                          <div className="font-semibold text-sm">Business Loan</div>
-                          <div className="text-xs text-gray-500 mt-1">EMI estimates</div>
-                        </Link>
-                        <Link
-                          to="/educationcal"
-                          className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
-                        >
-                          <div className="font-semibold text-sm">Education Loan</div>
-                          <div className="text-xs text-gray-500 mt-1">Financing plan</div>
-                        </Link>
-                        <Link
-                          to="/vehiclecal"
-                          className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
-                        >
-                          <div className="font-semibold text-sm">Vehicle Loan</div>
-                          <div className="text-xs text-gray-500 mt-1">Auto loan EMIs</div>
-                        </Link>
-                        <Link
-                          to="/agriculturecal"
-                          className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
-                        >
-                          <div className="font-semibold text-sm">Agriculture Loan</div>
-                          <div className="text-xs text-gray-500 mt-1">Farm loan estimates</div>
-                        </Link>
-                        {/* <Link
-                          to="/goldcal"
-                          className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
-                        >
-                          <div className="font-semibold text-sm">Gold Loan</div>
-                          <div className="text-xs text-gray-500 mt-1">Loan against gold</div>
-                        </Link> */}
-                        <Link
-                          to="/emical"
-                          className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
-                        >
-                          <div className="font-semibold text-sm">Loan Against Property</div>
-                          <div className="text-xs text-gray-500 mt-1">All loan types</div>
-                        </Link>
-                      </div>
+                {showDropdown && (
+                  <div className="absolute right-0 mt-2 w-[700px] bg-white text-black rounded-lg shadow-2xl z-50 p-3 border border-gray-200 animate-fadeIn">
+                    <div className="grid grid-cols-4 gap-2">
+                      <Link
+                        to="/Personalloan"
+                        className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
+                      >
+                        <div className="font-semibold text-sm">Personal Loan</div>
+                        <div className="text-xs text-gray-500 mt-1">Up to ₹10L in 10 mins</div>
+                      </Link>
+                      <Link
+                        to="/homeloan"
+                        className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
+                      >
+                        <div className="font-semibold text-sm">Home Loan</div>
+                        <div className="text-xs text-gray-500 mt-1">From 7.75%* p.a.</div>
+                      </Link>
+                      <Link
+                        to="/businessloan"
+                        className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
+                      >
+                        <div className="font-semibold text-sm">Business Loan</div>
+                        <div className="text-xs text-gray-500 mt-1">Up to ₹5L</div>
+                      </Link>
+                      <Link
+                        to="/educationloan"
+                        className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
+                      >
+                        <div className="font-semibold text-sm">Education Loan</div>
+                        <div className="text-xs text-gray-500 mt-1">Study abroad</div>
+                      </Link>
+                      <Link
+                        to="/vehicalloan"
+                        className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
+                      >
+                        <div className="font-semibold text-sm">Vehicle Loan</div>
+                        <div className="text-xs text-gray-500 mt-1">100% financing</div>
+                      </Link>
+                      <Link
+                        to="/agriculturepage"
+                        className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
+                      >
+                        <div className="font-semibold text-sm">Agriculture Loan</div>
+                        <div className="text-xs text-gray-500 mt-1">Farmers schemes</div>
+                      </Link>
+                      <Link
+                        to="/loanagainstpropartyloan"
+                        className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
+                      >
+                        <div className="font-semibold text-sm">Loan Against Property</div>
+                        <div className="text-xs text-gray-500 mt-1">All loan types</div>
+                      </Link>
                     </div>
-                  )}
-                </div>
-
-                <Link
-                  to="/contact"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
-                >
-                  Contact
-                </Link>
+                  </div>
+                )}
               </div>
+
+              {/* Desktop Calculators Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setShowCalcDropdown(true)}
+                onMouseLeave={() => setShowCalcDropdown(false)}
+              >
+                <div className="flex items-center">
+                  <Link
+                    to="#"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setShowCalcDropdown(!showCalcDropdown);
+                    }}
+                  >
+                    Calculators
+                  </Link>
+                  <svg
+                    className={`ml-1 h-4 w-4 text-gray-300 transition-transform duration-200 ${showCalcDropdown ? 'rotate-180' : ''}`}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+
+                {showCalcDropdown && (
+                  <div className="absolute right-0 mt-2 w-[700px] bg-white text-black rounded-lg shadow-2xl z-50 p-3 border border-gray-200 animate-fadeIn">
+                    <div className="grid grid-cols-4 gap-2">
+                      <Link
+                        to="/persnolcal"
+                        className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
+                      >
+                        <div className="font-semibold text-sm">Personal Loan</div>
+                        <div className="text-xs text-gray-500 mt-1">EMI calculator</div>
+                      </Link>
+                      <Link
+                        to="/homecal"
+                        className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
+                      >
+                        <div className="font-semibold text-sm">Home Loan</div>
+                        <div className="text-xs text-gray-500 mt-1">EMI breakdown</div>
+                      </Link>
+                      <Link
+                        to="/businesscal"
+                        className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
+                      >
+                        <div className="font-semibold text-sm">Business Loan</div>
+                        <div className="text-xs text-gray-500 mt-1">EMI estimates</div>
+                      </Link>
+                      <Link
+                        to="/educationcal"
+                        className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
+                      >
+                        <div className="font-semibold text-sm">Education Loan</div>
+                        <div className="text-xs text-gray-500 mt-1">Financing plan</div>
+                      </Link>
+                      <Link
+                        to="/vehiclecal"
+                        className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
+                      >
+                        <div className="font-semibold text-sm">Vehicle Loan</div>
+                        <div className="text-xs text-gray-500 mt-1">Auto loan EMIs</div>
+                      </Link>
+                      <Link
+                        to="/agriculturecal"
+                        className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
+                      >
+                        <div className="font-semibold text-sm">Agriculture Loan</div>
+                        <div className="text-xs text-gray-500 mt-1">Farm loan estimates</div>
+                      </Link>
+                      <Link
+                        to="/emical"
+                        className="block p-2 hover:bg-gray-50 rounded-md border border-gray-100 transition-all duration-200 hover:shadow-sm hover:scale-[1.01]"
+                      >
+                        <div className="font-semibold text-sm">Loan Against Property</div>
+                        <div className="text-xs text-gray-500 mt-1">All loan types</div>
+                      </Link>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <Link
+                to="/realestate"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              >
+                Real Estate
+              </Link>
+              <Link
+                to="/about"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              >
+                About Us
+              </Link>
+
+              <Link
+                to="/contact"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              >
+                Contact
+              </Link>
             </div>
           </div>
 
@@ -875,17 +956,6 @@ const Nav = () => {
                   <div className="font-medium text-sm">Agriculture Loan</div>
                   <div className="text-xs text-gray-300 mt-1">Farm schemes</div>
                 </Link>
-                {/* <Link
-                  to="/goldloan"
-                  className="block px-2 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
-                  onClick={() => {
-                    setIsOpen(false);
-                    setShowMobileDropdown(false);
-                  }}
-                >
-                  <div className="font-medium text-sm">Gold Loan</div>
-                  <div className="text-xs text-gray-300 mt-1">Instant loans</div>
-                </Link> */}
                 <Link
                   to="/emical"
                   className="block px-2 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
@@ -991,17 +1061,6 @@ const Nav = () => {
                   <div className="font-medium text-sm">Agriculture Loan</div>
                   <div className="text-xs text-gray-300 mt-1">Farm estimates</div>
                 </Link>
-                {/* <Link
-                  to="/goldcal"
-                  className="block px-2 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
-                  onClick={() => {
-                    setIsOpen(false);
-                    setShowMobileCalcDropdown(false);
-                  }}
-                >
-                  <div className="font-medium text-sm">Gold Loan</div>
-                  <div className="text-xs text-gray-300 mt-1">Loan against gold</div>
-                </Link> */}
                 <Link
                   to="/emical"
                   className="block px-2 py-2 hover:bg-gray-600 rounded-md text-sm text-gray-300 transition-colors duration-200"
@@ -1016,6 +1075,23 @@ const Nav = () => {
               </div>
             </div>
           </div>
+
+          <Link
+            to="/realestate"
+            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+            onClick={() => setIsOpen(false)}
+          >
+            Real Estate
+          </Link>
+
+          {/* About Page Link - Mobile */}
+          <Link
+            to="/about"
+            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+            onClick={() => setIsOpen(false)}
+          >
+            About Us
+          </Link>
 
           <Link
             to="/contact"

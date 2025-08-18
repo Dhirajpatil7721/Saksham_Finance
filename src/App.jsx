@@ -19,6 +19,13 @@ import AgricultureLoanPage from './Pages/Loans/AgricultureLoanPage '
 import EducationLoanCalculator from './Calculators/EducationLoanCalculator'
 import VehicleLoanCalculator from './Calculators/VehicleLoanCalculator'
 import AgricultureLoanCalculator from './Calculators/AgricultureLoanCalculator'
+import Footer from './Component/Footer'
+import AboutUs from './Pages/AboutUs'
+import FAQ from './Pages/FAQ'
+import PrivacyPolicy from './Pages/PrivacyPolicy'
+import TermsAndConditions from './Pages/TermsAndConditions '
+import Disclaimer from './Pages/DisclaimerPage '
+import RealEstate from './Pages/RealEstate'
 
 function App() {
   return (
@@ -28,6 +35,14 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contactus />} />
         <Route path="/form" element={<LoanApplicationForm />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms_conditions" element={<TermsAndConditions />} />
+        <Route path="/disclaimer" element={<Disclaimer />} />
+        <Route path="/realestate" element={<RealEstate/>} />
+
+
 
         {/* Loans */}
         <Route path="/Personalloan" element={<PersonalLoanPage />} />
@@ -37,7 +52,7 @@ function App() {
         <Route path="/educationloan" element={<EducationLoanPage />} />
         <Route path="/vehicalloan" element={<VehicleLoanPage />} />
         <Route path="/electronicsloan" element={<ElectricDeviceLoanPage />} />
-        <Route path="/agriculturepage" element={<AgricultureLoanPage/>} />
+        <Route path="/agriculturepage" element={<AgricultureLoanPage />} />
 
 
         {/* Calculators */}
@@ -45,12 +60,13 @@ function App() {
         <Route path="/homecal" element={<HomeLoanCalculator />} />
         <Route path="/businesscal" element={<BusinessLoanCalculator />} />
         <Route path="/loanagainstproprtycal" element={<LoanAgainstPropertyCalculator />} />
-        <Route path="/educationcal" element={<EducationLoanCalculator/>} />
-        <Route path="/vehiclecal" element={<VehicleLoanCalculator/>} />
-        <Route path="/emical" element={<LoanAgainstPropertyCalculator/>} />
-        <Route path="/agriculturecal" element={<AgricultureLoanCalculator/>} />
+        <Route path="/educationcal" element={<EducationLoanCalculator />} />
+        <Route path="/vehiclecal" element={<VehicleLoanCalculator />} />
+        <Route path="/emical" element={<LoanAgainstPropertyCalculator />} />
+        <Route path="/agriculturecal" element={<AgricultureLoanCalculator />} />
 
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }
